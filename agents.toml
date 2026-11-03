@@ -1,0 +1,18 @@
+version = 1
+agents = ["vscode", "pi"]
+
+[[skills]]
+name = "grilling"
+source = "mattpocock/skills"
+
+[[skills]]
+name = "branch-and-pr"
+source = "Pjore/skills"
+
+[[skills]]
+name = "commit-work"
+source = "Pjore/skills"
+
+[[skills]]
+name = "credential-security"
+source = "Pjore/skills"

@@ -1,0 +1,31 @@
+{
+  "name": "Agent Development Starter",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:24-bookworm",
+  "remoteUser": "node",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Development server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot-chat",
+        "GitHub.vscode-pull-request-github",
+        "esbenp.prettier-vscode",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=${localWorkspaceFolderBasename}-pnpm-store,target=/pnpm/store,type=volume"
+  ],
+  "postCreateCommand": ["bash", ".devcontainer/post-create.sh"],
+  "postStartCommand": ["bash", ".devcontainer/post-start.sh"]
+}

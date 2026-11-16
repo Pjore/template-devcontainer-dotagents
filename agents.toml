@@ -3,7 +3,7 @@ agents = ["vscode", "pi"]
 
 [[skills]]
 name = "grilling"
-source = "mattpocock/skills"
+source = "pjore/skills"
 
 [[skills]]
 name = "branch-and-pr"
